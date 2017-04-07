@@ -1,7 +1,7 @@
 node('maven') {
 
    stage('checkout navUnit')
-   git url: 'https://github.com/dmarley/tfrs-sonar-scanner.git'
+   git url: 'https://github.com/dmarley/sandbox-sonar.git'
 
    stage('change to working dir')
    dir 'java-gradle-simple'
