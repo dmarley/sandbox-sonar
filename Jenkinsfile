@@ -12,7 +12,7 @@ node('maven') {
        sh 'ls -l -srt'
    
        stage('execute sonar')
-       sh './gradlew sonarqube -Dsonar.jdbc.url=jdbc:postgresql://postgresql/sonar -Dsonar.verbose=true -Dsonar.jdbc.username=user7IO -Dsonar.jdbc.password=gnWBsreWQ7A0HXXU'
+       sh './gradlew sonarqube -Dsonar.host.url=http://172.51.36.30:9000 -Dsonar.jdbc.url=jdbc:postgresql://postgresql/sonar -Dsonar.verbose=true -Dsonar.jdbc.username=user7IO -Dsonar.jdbc.password=gnWBsreWQ7A0HXXU --stacktrace'
    }
 
 
