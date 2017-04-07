@@ -7,7 +7,7 @@ node('maven') {
    sh 'ls -l -srt'
 
    stage('change to working dir')
-   dir 'java-gradle-simple'
+   sh 'cd java-gradle-simple'
 
    stage('list dir')
    sh 'ls -l -srt'
