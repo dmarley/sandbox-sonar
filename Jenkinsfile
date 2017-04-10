@@ -1,5 +1,4 @@
 node('maven') {
-
    stage('checkout sandbox-sonar')
    git url: 'https://github.com/dmarley/sandbox-sonar.git'
    
@@ -12,9 +11,6 @@ node('maven') {
        sh 'ls -l -srt'
    
        stage('execute sonar')
-       sh './gradlew sonarqube -Dsonar.host.url=http://sonarqube-mem-tfrs-tools.pathfinder.gov.bc.ca -Dsonar.jdbc.url=jdbc:postgresql://postgresql/sonar -Dsonar.verbose=true -Dsonar.jdbc.username=user7IO -Dsonar.jdbc.password=gnWBsreWQ7A0HXXU --stacktrace'
+       sh './gradlew sonarqube -Dsonar.host.url=http://sonarqube-mem-tfrs-tools.pathfinder.gov.bc.ca -Dsonar.verbose=true --stacktrace'
    }
-
-
-
 }
